@@ -26,7 +26,7 @@ const WorkoutFormEdit = () => {
 
     const workout = {title, load, reps}
 
-    const response = await fetch('/api/workouts/'+ id, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/api/workouts/`+ id, {
       method: 'PATCH',
       body: JSON.stringify(workout),
       headers: {
