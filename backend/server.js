@@ -13,6 +13,8 @@ app.use(cors())
 app.use(express.json())
 
 app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "workout-tracker-khaki-mu.vercel.app");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   console.log(req.path, req.method)
   next()
 })
